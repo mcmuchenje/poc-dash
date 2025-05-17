@@ -8,9 +8,15 @@ import UserIcon from "@mui/icons-material/People";
 // import { Route } from "react-router-dom";
 import { Layout } from "./Layout";
 import { Dashboard } from "./components/Dashboard/Dashboard";
+import { authProvider } from "./authProvider";
 
 export const App = () => (
-  <Admin dashboard={Dashboard} layout={Layout} dataProvider={dataProvider}>
+  <Admin
+    authProvider={authProvider}
+    dashboard={Dashboard}
+    layout={Layout}
+    dataProvider={dataProvider}
+  >
     <Resource
       icon={UserIcon}
       name="users"
