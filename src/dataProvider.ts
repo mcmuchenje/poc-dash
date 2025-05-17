@@ -13,6 +13,6 @@ const httpClient = (url: string, options: any = {}) => {
 };
 
 export const dataProvider = jsonServerProvider(
-  "http://159.223.30.242:8080/api",
+  "https://byodmasimba.geenet.co.zw/api",
   httpClient
 );

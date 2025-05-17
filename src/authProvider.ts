@@ -6,7 +6,7 @@ export const authProvider: AuthProvider = {
   async login({ username, password }) {
     try {
       const user = await axios.post(
-        "http://159.223.30.242:8080/api/auth/signin",
+        "https://byodmasimba.geenet.co.zw/api/auth/signin",
         {
           username,
           password,
