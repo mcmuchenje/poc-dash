@@ -1,10 +1,24 @@
-import { Admin, Resource, ListGuesser } from "react-admin";
-import { Layout } from "./Layout";
-import jsonServerProvider from "ra-data-json-server";
+import {
+  Admin,
+  Resource,
+  ListGuesser,
+  EditGuesser,
+  ShowGuesser,
+} from "react-admin";
+import { dataProvider } from "./dataProvider";
+import { UserList } from "./components/Users/UserList";
+import { UserShow } from "./components/Users/UserShow";
+import { UserEdit } from "./components/Users/UserEdit";
+import { UserCreate } from "./components/Users/UserCreate";
 
-
-import { authProvider } from './authProvider';
-
-export const App = () => <Admin authProvider={authProvider} dataProvider={jsonServerProvider("https://jsonplaceholder.typicode.com")} layout={Layout}>
-    <Resource name="posts" list={ListGuesser} />
-</Admin>;
+export const App = () => (
+  <Admin dataProvider={dataProvider}>
+    <Resource
+      name="users"
+      list={UserList}
+      show={UserShow}
+      edit={UserEdit}
+      create={UserCreate}
+    />
+  </Admin>
+);
