@@ -47,11 +47,11 @@ export const Dashboard = () => (
   <Grid sx={{ mt: 1 }} container spacing={2}>
     <Grid size={{ xs: 12, sm: 6, md: 4 }}>
       <Card>
-        <Title title="Dashboard" />   
+        <Title title="Dashboard" />
         <CardContent>
-            <Typography variant="h5" component="div">
-                Top 5 Users
-            </Typography>
+          <Typography variant="h5" component="div">
+            Top 5 Users
+          </Typography>
           {/* <p>Welcome to the dashboard!</p> */}
           <ResponsiveContainer width="100%" height={300}>
             <PieChart width={500} height={500}>
